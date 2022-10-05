@@ -1,0 +1,25 @@
+{
+    "name": "Extend Grammarly Editor",
+    "description": "Addon to have some extra features in Grammarly",
+    "version": "1.0",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "main.html"
+    },
+    "permissions": ["storage"],
+    "content_scripts": [
+        {
+            "matches": ["*://app.grammarly.com/*"],
+            "js": ["content.js"]
+        }
+    ],
+    "commands": {
+        "_execute_action": {
+            "suggested_key": {
+            "default": "Ctrl+Shift+F",
+            "mac": "MacCtrl+Shift+F"
+            },
+            "description": "Opens hello.html"
+        }
+    }
+}
